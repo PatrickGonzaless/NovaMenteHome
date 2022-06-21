@@ -52,6 +52,55 @@ header{
   width: 97vw;
 }
 
+.nav_responsiva {
+  display:none;
+  justify-content:space-around;
+  align-items:center;
+  font-family:Inter;
+  background-color:#FFF;
+  height:8vh;
+  border-bottom:1px solid #AFAFAF;
+}
+
+.nav-list {
+  list-style:none;
+  display:none;
+}
+
+.nav-list.active {
+  background-color:#FFF;
+}
+
+.nav-list li {
+  letter-spacing:3px;
+  margin-left:32px;
+}
+
+.nav-list ul {
+  width:80vw;
+  height:92vh;
+  display: none;
+}
+
+.nav-list li a {
+  text-decoration:none;
+  color:#000;
+}
+
+.mobile-menu {
+  display:none;
+  cursor:pointer;
+  margin-left:70vw;
+}
+
+.mobile-menu div {
+  width:32px;
+  height:2px;
+  background:#ADADAD;
+  margin:8px;
+  transition:0.3s;
+}
+
 #acessibilidade{
   position: fixed;
   width: 3%;
@@ -252,7 +301,7 @@ header{
   position: relative;
   font-family: Inder;
   font-size: 20px;
-  width: 35vw;
+  width: 25vw;
   margin-left: 9vw;
   padding-top: 4vh;
   text-align: left;
@@ -363,7 +412,7 @@ header{
 
 .divh3_3{
   margin-top: 7vh;
-  width: 27vw;
+  width: 35vw;
   font-size: 20px;
   font-family: Inder;
   text-align: center;
@@ -428,7 +477,6 @@ header{
 }
 
 .roxo_texto2{
-  width: 80%;
   font-size: 15px;
   font-weight: lighter;
   text-align: left;
@@ -475,7 +523,7 @@ header{
 
 .maisinformacoes1_pai{
   position: relative;
-  width: 97vw;
+  width: 98vw;
   display: flex;
   flex-direction: row;
 }
@@ -514,7 +562,7 @@ header{
 
 .maisinformacoes2_pai{
   position: relative;
-  width: 99vw;
+  width: 98vw;
   display: flex;
   flex-direction: row;
 }
@@ -1065,7 +1113,13 @@ height: 10.8vh;
 
     .Login{
       display: none;
-    } 
+    }
+
+    #logo{
+      position: absolute;
+      margin-top: -27px;
+      font-size: 26px;
+    }
    
     .linha_responsivo{
       margin-top: -6vh;
@@ -1079,6 +1133,63 @@ height: 10.8vh;
     #acessibilidade-hid{
       display: none;
     }
+
+    .nav_responsiva {
+      display:flex;
+      width: 99vw;
+  }
+
+  .nav-list {
+      position:absolute;
+      top:8vh;
+      right:0;
+      width:200px;
+      height:92vh;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-around;
+      transition:0.3s ease-in;
+      display:flex;
+  }
+
+  .nav-list li {
+      margin-left:0;
+      opacity:0;
+  }
+
+  .mobile-menu {
+      display:block;
+      margin-left: 86%;
+  }
+  
+  .nav-list.active {
+      z-index:10;
+      transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+      from {
+          opacity:0;
+          transform:translateX(50px);
+      }
+      to {
+          opacity:1;
+          transform:translateX(0);
+      }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform:rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity:0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform:rotate(45deg) translate(-5px, -7px);
+  }
+
 
     .acess0{
       display: none;
@@ -1539,7 +1650,6 @@ height: 10.8vh;
   @media only screen and (max-width:628px){
     body{
       background-image: none;
-
     }
 
     #nav_header{
@@ -1551,11 +1661,71 @@ height: 10.8vh;
       margin-top: -5.8vh;
     }
 
+    #logo{
+      margin-top: -28px;
+    }
+
     #menu_responsivo{
       margin-top: -3.5vh;
       margin-right: 3vw;
       display: block;
     }
+
+    .nav_responsiva {
+      display:flex;
+  }
+
+    .nav-list {
+        position:absolute;
+        top:8vh;
+        right:0;
+        width:200px;
+        height:92vh;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-around;
+        transition:0.3s ease-in;
+        display:flex;
+    }
+
+    .nav-list li {
+        margin-left:0;
+        opacity:0;
+    }
+
+    .mobile-menu {
+        display:block;
+        margin-top: -9px;
+    }
+    
+    .nav-list.active {
+        z-index:10;
+        transform: translateX(0);
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity:0;
+            transform:translateX(50px);
+        }
+        to {
+            opacity:1;
+            transform:translateX(0);
+        }
+    }
+    
+    .mobile-menu.active .line1 {
+      transform:rotate(-45deg) translate(-8px, 8px);
+    }
+    
+    .mobile-menu.active .line2 {
+      opacity:0;
+    }
+    
+    .mobile-menu.active .line3 {
+      transform:rotate(45deg) translate(-5px, -7px);
+    }
+
 
     .Login{
       display: none;
@@ -1687,7 +1857,6 @@ height: 10.8vh;
       margin-top: 2vh;
       font-size: 17px;
     }
-
     
     .img4{
       width: 45vw;
@@ -1757,14 +1926,19 @@ height: 10.8vh;
     }
 
     #img6responsivo{
+      width: 85vw;
       display: block;
-      margin-left: -95vw;
-      margin-top: -3.5vh;
+      margin-left: -89vw;
+      margin-top: 13.5vh;
     }
 
     .maisinformacoes2{
       width: 99vw;
       margin-top: 400px
+    }
+
+    .maisinformacoes2_pai{
+      margin-top: -76px;
     }
 
     .maisinformacoes2_pai p{
@@ -1811,7 +1985,7 @@ height: 10.8vh;
 
     .maisinfo_texto3{
       width: 75vw;
-      margin-left: 35vw;
+      margin-left: 26vw;
       padding-top: 40px;
       text-align: center;
     }
@@ -2039,6 +2213,62 @@ height: 10.8vh;
       margin-left: -8vw;;
     }
 
+    .nav_responsiva {
+      display:flex;
+  }
+
+  .nav-list {
+      position:absolute;
+      top:8vh;
+      right:0;
+      width:200px;
+      height:92vh;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-around;
+      transition:0.3s ease-in;
+      display:flex;
+  }
+
+  .nav-list li {
+      margin-left:0;
+      opacity:0;
+  }
+
+  .mobile-menu {
+      display:block;
+      
+  }
+  
+  .nav-list.active {
+      z-index:10;
+      transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+      from {
+          opacity:0;
+          transform:translateX(50px);
+      }
+      to {
+          opacity:1;
+          transform:translateX(0);
+      }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform:rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity:0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform:rotate(45deg) translate(-5px, -7px);
+  }
+
+
     .img1responsivo{
       margin-left: 2.5vw;
     }
@@ -2128,6 +2358,62 @@ height: 10.8vh;
     .primeiraparte_titulo{
       margin-left: -12vw;
     }
+
+    .nav_responsiva {
+      display:flex;
+  }
+
+  .nav-list {
+      position:absolute;
+      top:8vh;
+      right:0;
+      width:200px;
+      height:92vh;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-around;
+      transition:0.3s ease-in;
+      display:flex;
+  }
+
+  .nav-list li {
+      margin-left:0;
+      opacity:0;
+  }
+
+  .mobile-menu {
+      display:block;
+      
+  }
+  
+  .nav-list.active {
+      z-index:10;
+      transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+      from {
+          opacity:0;
+          transform:translateX(50px);
+      }
+      to {
+          opacity:1;
+          transform:translateX(0);
+      }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform:rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity:0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform:rotate(45deg) translate(-5px, -7px);
+  }
+
 
     .img1responsivo{
       margin-left: 7vw;
@@ -2228,6 +2514,8 @@ height: 10.8vh;
 
     #logo{
       margin-left: 5%;
+    position: absolute;
+    margin-top: -26px;
     }
 
     .Login{
@@ -2239,6 +2527,64 @@ height: 10.8vh;
       margin-right: 3%;
       display: block;
     }
+
+    .nav_responsiva {
+      display: flex;
+      width: 99vw;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0px;
+    width: 200px;
+    height: 92vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s ease-in;
+    display: flex;
+  }
+
+  .nav-list li {
+      margin-left:0;
+      opacity:0;
+  }
+
+  .mobile-menu {
+      display:block;
+      
+  }
+  
+  .nav-list.active {
+    z-index: 10;
+    transform: translateX(0);
+    padding-left: 0%;
+  }
+  
+  @keyframes navLinkFade {
+      from {
+          opacity:0;
+          transform:translateX(50px);
+      }
+      to {
+          opacity:1;
+          transform:translateX(0);
+      }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform:rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity:0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform:rotate(45deg) translate(-5px, -7px);
+  }
+
 
     .linha_responsivo{
       margin-top: -40px;
