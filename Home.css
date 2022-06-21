@@ -2571,19 +2571,19 @@ height: 10.8vh;
           opacity:1;
           transform:translateX(0);
       }
-  }
-  
-  .mobile-menu.active .line1 {
-    transform:rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
-    opacity:0;
-  }
-  
-  .mobile-menu.active .line3 {
-    transform:rotate(45deg) translate(-5px, -7px);
-  }
+    }
+    
+    .mobile-menu.active .line1 {
+      transform:rotate(-45deg) translate(-8px, 8px);
+    }
+    
+    .mobile-menu.active .line2 {
+      opacity:0;
+    }
+    
+    .mobile-menu.active .line3 {
+      transform:rotate(45deg) translate(-5px, -7px);
+    }
 
 
     .linha_responsivo{
@@ -2805,8 +2805,12 @@ height: 10.8vh;
 
     #img6responsivo{
       display: block;
-      margin-left: 19%;
-      margin-top: -35px;
+      margin-left: 21vw;
+      margin-top: 5px;
+    }
+
+    #img6responsivo img{
+      margin-left: -10vw;
     }
 
     .maisinfo_titulo2{
