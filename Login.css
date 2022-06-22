@@ -4,11 +4,6 @@
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url(Fontes/Poppins/Poppins-Regular.ttf);
-}
-
-@font-face {
     font-family: Inter;
     src: url(Fontes/Inter-Regular.ttf);
 }
@@ -48,7 +43,7 @@ body{
     font-weight: lighter;
     color: #9C9C9C;
     margin-top: -30px;
-    font-family:Poppins;
+    font-family:Inter;
     text-decoration: none;
   }
   
