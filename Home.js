@@ -140,12 +140,12 @@ function darkmode(){
         document.querySelector(".cadastrar").style.transform="scale(1.5)";
         document.querySelector(".cadastrar").style.marginTop="10vh";
 
-        // document.querySelector(".divh3").style.transform="scale(1.5)";
-        // document.querySelector(".divh3_p").style.transform="scale(1.5)";
-        // document.querySelector(".divh3_2").style.transform="scale(1.5)";
-        // document.querySelector(".divh3_2 p").style.transform="scale(1.5)";
-        // document.querySelector(".divh3_3").style.transform="scale(1.5)";
-        // document.querySelector(".divh3_p").style.transform="scale(1.5)";
+        document.querySelector(".h3pd").style.transform="scale(1.5)";
+        document.querySelector(".pd").style.transform="scale(1.5)";
+        document.querySelector(".h3eq").style.transform="scale(1.5)";
+        document.querySelector(".eq").style.transform="scale(1.5)";
+        document.querySelector(".h3t").style.transform="scale(1.5)";
+        document.querySelector(".t").style.transform="scale(1.5)";
 
         document.querySelector(".parte_roxa").style.fontSize="40px";
         document.querySelector(".parte_roxa2").style.fontSize="40px";
@@ -186,11 +186,15 @@ function darkmode(){
         document.querySelector(".opiniao_centro").style.fontSize="20px";
 
         document.querySelector(".plataformah3").style.fontSize="35px";
-        document.querySelector(".navplataforma a").style.fontSize="25px";
+        document.querySelector("plataforma a").style.fontSize="25px";
 
         document.querySelector(".socialh3").style.fontSize="35px";
+        document.querySelector(".social a").style.fontSize="25px";
+
         document.querySelector(".contatoh3").style.fontSize="35px";
+        document.querySelector(".contato a").style.fontSize="25px";
     }
+
 
     function normalvisao(){
         document.querySelector("#nav_header").style.transform="scale(1.0)";
@@ -201,11 +205,12 @@ function darkmode(){
         document.querySelector(".cadastrar").style.transform="scale(1.0)";
         document.querySelector(".cadastrar").style.marginTop="3vh";
 
-        // document.querySelector(".divh3").style.transform="scale(1.0)";
-        // document.querySelector(".divh3_p").style.transform="scale(1.0)";
-        // document.querySelector(".divh3_2").style.transform="scale(1.0)";
-        // document.querySelector(".divh3_2 p").style.transform="scale(1.0)";
-        // document.querySelector(".divh3_3").style.transform="scale(1.0)";
+        document.querySelector(".h3pd").style.transform="scale(1.0)";
+        document.querySelector(".pd").style.transform="scale(1.0)";
+        document.querySelector(".h3eq").style.transform="scale(1.0)";
+        document.querySelector(".eq").style.transform="scale(1.0)";
+        document.querySelector(".h3t").style.transform="scale(1.0)";
+        document.querySelector(".t").style.transform="scale(1.0)";
 
         document.querySelector(".parte_roxa").style.fontSize="25px";
         document.querySelector(".parte_roxa2").style.fontSize="25px";
@@ -246,7 +251,11 @@ function darkmode(){
         document.querySelector(".opiniao_centro").style.fontSize="15px";
 
         document.querySelector(".plataformah3").style.fontSize="25px";
+        document.querySelector(".plataforma a").style.fontSize="19px";
         
         document.querySelector(".socialh3").style.fontSize="25px";
+        document.querySelector(".social a").style.fontSize="19px";
+
         document.querySelector(".contatoh3").style.fontSize="25px";
+        document.querySelector(".contato p").style.fontSize="19px";
     }
